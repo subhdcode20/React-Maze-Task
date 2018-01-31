@@ -16,8 +16,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      AppComponents: path.resolve.bind('src', 'components'),
-      AppContainers: path.resolve.bind('src', 'containers'),
+      AppComponents: path.win32.resolve(__dirname, './src/components/'),
+      AppContainers: path.win32.resolve(__dirname, './src/containers'),
     }
   },
   plugins: [
