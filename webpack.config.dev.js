@@ -14,6 +14,12 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  resolve: {
+    alias: {
+      AppComponents: path.resolve.bind('src', 'components'),
+      AppContainers: path.resolve.bind('src', 'containers'),
+    }
+  },
   plugins: [
     /**
      * This is where the magic happens! You need this to enable Hot Module Replacement!
@@ -40,14 +46,14 @@ module.exports = {
       {
         test: /\.js?/,
         exclude: [/node_modules/, /styles/],
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.scss$/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
       },
-      { 
+      {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=8192'
       }
