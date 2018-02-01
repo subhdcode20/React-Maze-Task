@@ -14,4 +14,8 @@ Steps to run:
 
 go to url: localhost:3000
 
-project working on only 'dev' server as 'prod' server is not configured.
+It calculates obstacles on random positions.
+
+Use arrow keys to move the player around.
+
+Project working on only 'dev' server as 'prod' server is not configured.
